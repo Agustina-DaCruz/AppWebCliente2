@@ -107,7 +107,6 @@ function renderizarCatalogo() {
             <p>$${p.precio.toLocaleString('es-AR')}</p>
             
             <div class="container-buttons">
-                <!-- Cambiado: Ahora va a detalle.html a secas y lleva el data-id -->
                 <a href="detalle.html" class="btn-detalle" data-id="${p.id}">Detalle</a>
                 <a href="#" class="btn-fav" data-id="${p.id}">
                     <img src="${favoritos.includes(p.id) ? 'img/fav2.svg' : 'img/fav.svg'}" alt="Favoritos">
@@ -397,17 +396,17 @@ function toggleCarrito(e) {
 }
 
 
-/*PRUEBA*/
+/*CONTADORES*/
 
-// NUEVA FUNCIÓN: Cuenta cuántos favoritos hay y actualiza el header
+
 function actualizarContadorFavoritos() {
     const contador = document.getElementById("contador-favoritos");
-    if (!contador) return; // Seguridad por si no estamos en una página con header
+    if (!contador) return;
 
     const cantidad = favoritos.length;
     contador.textContent = cantidad;
 
-    // Opcional: Si querés ocultar la burbuja cuando está en 0
+
     if (cantidad > 0) {
         contador.style.display = "flex";
     } else {
@@ -415,15 +414,14 @@ function actualizarContadorFavoritos() {
     }
 }
 
-// NUEVA FUNCIÓN: Cuenta cuántos productos hay en el carrito y actualiza el header
 function actualizarContadorCarrito() {
     const contador = document.getElementById("contador-carrito");
-    if (!contador) return; // Seguridad por si no estamos en una página con header
+    if (!contador) return;
 
     const cantidad = carrito.reduce((total, item) => total + item.cantidad, 0);
     contador.textContent = cantidad;
 
-    // Opcional: Si querés ocultar la burbuja cuando está en 0
+
     if (cantidad > 0) {
         contador.style.display = "flex";
     } else {
