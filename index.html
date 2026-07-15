@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/icono.jpg">
+    <title>PostWatch - Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Krona+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@360&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Krona+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@360&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Encabezado -->    
+    <header>
+        <div class="container-header">
+        <a href="index.html"><img src="img/logo2.png" alt="Logo PostWatch" class="logo"></a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+
+        <nav class="container-items">
+            <button class="fav-btn" aria-label="ingresar a favoritos" aria-controls="primary-fav" aria-expanded="false">
+                <span class="sr-only">Ingresar a Favoritos</span>
+            </button>
+
+            <button class="cart-btn" aria-label="ingresar al carrito" aria-controls="primary-cart" aria-expanded="false">
+                <span class="sr-only">Ingresar al Carrito</span>
+            </button>
+
+            <button id="btn-abrir-favoritos" class="btn-header">
+                <span id="contador-favoritos" class="badge-contador-fav">0</span>
+            </button>
+
+            <button id="btn-abrir-carrito" class="btn-header">
+                <span id="contador-carrito" class="badge-contador-cart">0</span>
+            </button>
+
+        </nav>
+
+        <aside class="mis-favoritos primary-fav" id="primary-fav" data-visible="false">
+            <h1>Mis Favoritos <button class="fav-btn-cerrar"><span class="sr-only">Cerrar Favoritos</span></button></h1>
+            <ul class="lista-favoritos"></ul>
+        </aside>
+
+
+
+        <aside class="mi-carrito primary-cart" id="primary-cart" data-visible="false">
+            <h1>Mi Carrito <button class="cart-btn-cerrar"> <span class="sr-only">Cerrar Carrito</span></button></h1>
+            <ul class="lista-carrito"></ul>
+        </aside>  
+        </div>
+    </header>
+
+
+<main class="contenido">
+<!-- Landing Page -->
+    <section class="landing-page">
+        <div>   
+            <h1 class="titulo-negro">POST<span class="titulo-rojo">WATCH</span></h1>
+            <p>Venta de posters de tus pelis y series favoritas</p>
+            <div class="contenedor-botones">
+                <a class="boton-LP" href="#catalogo">Catálogo</a>
+                <a class="boton-LP2" href="nosotros.html">Conocenos</a>
+            </div>
+        </div>
+        <div class="landing-page-im">
+            <img src="img/batman.jpg" alt="Landing Page" class="landing-img">
+        </div>
+    </section>
+<!-- Catalogo -->
+ 
+    <section class="catalogo" id="catalogo">
+        <h1>Catálogo</h1>
+        <div class="contenedor-catalogo"></div>
+    </section>
+
+<!-- Footer -->
+    <footer>
+        <section class="container-footer">
+            <img class="logo-footer" src="./img/logo2.png" alt="Logo PostWatch Final (Footer)">
+            <ul>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/">TikTok</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+            </ul>
+        </section>
+        <section class="text-footer">
+            <p>Todos los derechos reservados 2026 ©</p>
+        </section>
+    </footer>
+</main>
+<!-- JS -->
+    <script src="main.js" defer></script>
+
+        
+</body>
+</html>
+
+
